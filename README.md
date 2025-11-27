@@ -11,16 +11,35 @@ You will build:
 - A **frontend interface** that displays, filters, and interacts with those users
 ---
 # Backend Requirements (Node.js + Express)
-Create a simple backend server that exposes a single proxy endpoint.
+1. Create a simple backend server that exposes a single proxy endpoint.
 ### **Base URL**
 ```
 http://localhost:3000
 ```
 ### **Endpoint: `GET /api/users`**
 This endpoint must:
-1. Fetch users from `https://jsonplaceholder.typicode.com/users`
-2. Include basic error handling
-3. Return the JSON data to your frontend
+a. Fetch users from `https://jsonplaceholder.typicode.com/users`
+b. Include basic error handling
+c. Return the JSON data to your frontend
+
+2. Add a backend endpoint:
+```
+GET /api/search?q=<term>
+```
+This endpoint must:
+a. 1. Implement **Levenshtein distance** *from scratch* (no external distance libraries).
+b. For each user, compute similarity between:
+    - search term
+    - user.name
+c. Sort results by similarity descending.
+d. Return top 5 matches.
+e. Performance:
+    - Must compute a single query in **< 50ms** on average.
+    - Use optimized DP (O(min(m, n)) space).
+f. Include at least **3 unit tests**:
+    - perfect match
+    - 1 edit distance
+    - no similarity
 ---
 # Frontend Requirements (React + TypeScript)
 The frontend must fetch data **only from your backend**:
