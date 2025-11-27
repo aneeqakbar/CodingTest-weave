@@ -135,44 +135,76 @@ When a user is clicked, show their details on the right side:
     -   Live Vercel link
 
 ------------------------------------------------------------------------
-### Annexure
-## Levenshtein Distance details:
-Q. What It Is
-Levenshtein distance is the minimum number of single-character edits required to transform one string into another.
-Allowed operations:
-- Insertion
-- Deletion
-- Substitution
+### Annexure 
 
-Example:
-kitten → sitting takes 3 steps:
-kitten → sitten (substitute k → s)
-sitten → sittin (substitute e → i)
-sittin → sitting (insert g)
+# Levenshtein Distance Details
+
+### **What It Is**
+
+The **Levenshtein distance** is the minimum number of single-character
+edits required to transform one string into another.
+
+**Allowed operations:**
+
+-   **Insertion**
+-   **Deletion**
+-   **Substitution**
+
+------------------------------------------------------------------------
+
+### **Example**
+
+Transforming `"kitten"` → `"sitting"` requires **3 steps**:
+
+1.  kitten → sitten (substitute k → s)
+2.  sitten → sittin (substitute e → i)
+3.  sittin → sitting (insert g)
 
 Therefore:
-distance("kitten", "sitting") = 3
 
-Formal Definition
-Given two strings a (length m) and b (length n), the Levenshtein distance d(m, n) is defined recursively:
+    distance("kitten", "sitting") = 3
 
-if min(m, n) = 0: distance = max(m, n)
-Otherwise:
-d(i, j) = min(
-  d(i-1, j) + 1,        // deletion
-  d(i, j-1) + 1,        // insertion
-  d(i-1, j-1) + cost    // substitution
-)
-Where cost is:
-0 if a[i] == b[j]
-1 otherwise
- 
-Time & Space Complexity
-Traditional DP:
-Time:  O(m * n)
-Space: O(m * n)
+------------------------------------------------------------------------
 
-Optimized DP (only previous row kept):
-Space: O(min(m, n))
----
+### **Formal Definition**
+
+Given two strings **a** (length *m*) and **b** (length *n*), the
+Levenshtein distance **d(m, n)** is defined recursively:
+
+-   If `min(m, n) = 0`:
+
+```{=html}
+<!-- -->
+```
+    distance = max(m, n)
+
+-   Otherwise:
+
+```{=html}
+<!-- -->
+```
+    d(i, j) = min(
+      d(i-1, j)   + 1,      // deletion
+      d(i, j-1)   + 1,      // insertion
+      d(i-1, j-1) + cost    // substitution
+    )
+
+Where **cost** is:
+
+    0 if a[i] == b[j]
+    1 otherwise
+
+------------------------------------------------------------------------
+
+### **Time & Space Complexity**
+
+#### Traditional Dynamic Programming
+
+-   **Time:** O(m × n)
+-   **Space:** O(m × n)
+
+#### Optimized Dynamic Programming
+
+-   **Space:** O(min(m, n))
+
 Good luck! 
