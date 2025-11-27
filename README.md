@@ -1,39 +1,86 @@
-# CodingTest
-Using **React + TypeScript**, build a small interface with the following backend and frontend components:
+# Full-Stack Coding Challenge – React + TypeScript + Node.js
 
-### **Backend Task: Create a simple backend API proxy**
-Build a small server (Node/Express):
-- Add route: **GET `/api/users`**
-- This route:
-    - Fetches from `https://jsonplaceholder.typicode.com/users`
-    - Adds basic error handling
-    - Returns the data to the frontend
+Thank you for participating in our coding challenge!  
+Your goal is to build a small full-stack application using **React + TypeScript** on the frontend and **Node.js + Express** on the backend.
 
-### Frontend Tasks:
-### **1. Fetches a list of users from your backend**
+Please follow all requirements and submission instructions below.
+---
+## Project Overview
+You will build:
+- A **backend API proxy** that fetches users from a public API
+- A **frontend interface** that displays, filters, and interacts with those users
+---
+# Backend Requirements (Node.js + Express)
+Create a simple backend server that exposes a single proxy endpoint.
+### **Base URL**
+```
+http://localhost:3000
+```
+### **Endpoint: `GET /api/users`**
+This endpoint must:
+1. Fetch users from `https://jsonplaceholder.typicode.com/users`
+2. Include basic error handling
+3. Return the JSON data to your frontend
+---
+# Frontend Requirements (React + TypeScript)
+The frontend must fetch data **only from your backend**:
 ```
 GET http://localhost:3000/api/users
 ```
-### **2. Displays the users in a searchable, filterable list**
-- Show: name, email, company name
-- Add a search box that filters by **name** (client-side)
-- Should update results as you type (debounced: 300ms)
-### **3. When a user is clicked, show their details in a side panel**
-Display:
+---
+## 1. User List With Search & Debounce
+Display all users showing:
+- Name
+- Email
+- Company name
+
+Add a search box that:
+- Filters by name
+- Uses a 300ms debounce
+- Updates client-side
+
+Add a **“Favorites Only”** toggle.
+---
+## 2. User Detail Side Panel
+When a user is clicked, show their details on the right side:
 - Name
 - Email
 - Phone
 - Website
 - Address (street, city)
 - Company name
-### **4. Add the ability to “favorite” a user**
-- Clicking a ⭐ icon toggles the user as favorited
-- Store favorites in **React state (not localStorage)**
-- Show a “Favorites Only” toggle filter
-
-### Submission Instructions:
-- git clone this repository on your github.
-- Share your github repository url with us.
-- Connect and deploy your github repository to vercel
-- Ensure to regularly push your code, it should run a redeployment on vercel
-- Share the live deployment vercel link
+---
+## 3. Favorite a User (⭐)
+- Clicking ⭐ toggles favorite status
+- Must not trigger the details panel
+- Favorites stored only in React state
+---
+# Repository Structure
+```
+/backend    → Express server
+/frontend   → React + TypeScript
+```
+---
+# Running Locally
+### Backend
+```
+cd backend
+npm install
+npm run dev
+```
+### Frontend
+```
+cd frontend
+npm install
+npm run dev
+```
+---
+# Deployment Instructions
+1. Push code to GitHub  
+2. Deploy via Vercel  
+3. Ensure auto‑deploy on push  
+4. Submit:
+   - GitHub repo link  
+   - Live Vercel link  
+---
+Good luck! 
