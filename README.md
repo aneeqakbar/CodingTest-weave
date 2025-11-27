@@ -57,8 +57,11 @@ e.  Performance requirements:
     -   Use optimized DP (**O(min(m, n)) space**)
     
 f.  Include at least **3 unit tests**:
+
     -   perfect match
+    
     -   1 edit distance
+    
     -   no similarity
 
 ------------------------------------------------------------------------
