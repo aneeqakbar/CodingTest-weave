@@ -1,6 +1,6 @@
 # Full-Stack Coding Challenge -- React + TypeScript + Node.js
 
-Thank you for participating in our coding challenge!\
+Thank you for participating in our coding challenge!
 Your goal is to build a small full-stack application using **React + TypeScript** on the frontend and **Node.js + Express** on the backend. The total time for this challenge is 1 hour that is 60 minutes.
 
 Please follow all requirements and submission instructions below.
@@ -11,7 +11,7 @@ Please follow all requirements and submission instructions below.
 
 You will build:
 
--   A **backend API proxy** that fetches users from a public API\
+-   A **backend API proxy** that fetches users from a public API
 -   A **frontend interface** that displays, filters, and interacts with
     those users
 
@@ -25,11 +25,11 @@ You will build:
 
     http://localhost:3000
 
-**Endpoint: `GET /api/users`**\
+**Endpoint: `GET /api/users`**
 This endpoint must:
 
 1.  Fetch users from `https://jsonplaceholder.typicode.com/users`
-2.  Include basic error handling\
+2.  Include basic error handling
 3.  Return the JSON data to your frontend
 
 ------------------------------------------------------------------------
@@ -41,18 +41,18 @@ This endpoint must:
 This endpoint must:
 
 a.  Implement **Levenshtein distance** *from scratch* (no external
-    distance libraries). See [Annexure](#annexure) at the end\
+    distance libraries). See [Annexure](#annexure) at the end
 b.  For each user, compute similarity between:
-    -   search term\
-    -   user.name\
-c.  Sort results by similarity (descending)\
-d.  Return the top 5 matches\
+    -   search term
+    -   user.name
+c.  Sort results by similarity (descending)
+d.  Return the top 5 matches
 e.  Performance requirements:
-    -   Must compute a single query in **\< 50ms** on average\
-    -   Use optimized DP (**O(min(m, n)) space**)\
+    -   Must compute a single query in **\< 50ms** on average
+    -   Use optimized DP (**O(min(m, n)) space**)
 f.  Include at least **3 unit tests**:
-    -   perfect match\
-    -   1 edit distance\
+    -   perfect match
+    -   1 edit distance
     -   no similarity
 
 ------------------------------------------------------------------------
@@ -69,14 +69,14 @@ The frontend must fetch data **only from your backend**:
 
 Display all users showing:
 
--   Name\
--   Email\
+-   Name
+-   Email
 -   Company name
 
 Add a search box that:
 
--   Filters by name\
--   Uses a **300ms debounce**\
+-   Filters by name
+-   Uses a **300ms debounce**
 -   Updates on the client side
 
 Add a **"Favorites Only"** toggle.
@@ -87,16 +87,16 @@ Add a **"Favorites Only"** toggle.
 
 When a user is clicked, show their details on the right side:
 
--   Name\
--   Email\
+-   Name
+-   Email
 -   Phone
 
 ------------------------------------------------------------------------
 
 ### 3. Favorite a User (⭐)
 
--   Clicking ⭐ toggles favorite status\
--   Must **not** trigger the details panel\
+-   Clicking ⭐ toggles favorite status
+-   Must **not** trigger the details panel
 -   Favorites stored only in React state
 
 ------------------------------------------------------------------------
@@ -126,12 +126,12 @@ When a user is clicked, show their details on the right side:
 
 ## Deployment and Submission Instructions
 
-1.  Push code to GitHub\
-2.  Deploy via Vercel\
-3.  Ensure auto-deploy on push\
-4.  Total time: 1 hour (60 mins)\
+1.  Push code to GitHub
+2.  Deploy via Vercel
+3.  Ensure auto-deploy on push
+4.  Total time: 1 hour (60 mins)
 5.  Submit:
-    -   GitHub repo link\
+    -   GitHub repo link
     -   Live Vercel link
 
 ------------------------------------------------------------------------
