@@ -1,10 +1,10 @@
 import express from "express";
-import { fetchUsersFromApi } from "../../managers/users";
+import usersController from "../../controllers/users";
 
 const router = express.Router();
 
 router.get("/", async (_req, res) => {
-  const data = await fetchUsersFromApi();
+  const data = await usersController.fetchUsersFromApi();
   res.json(data);
 });
 
