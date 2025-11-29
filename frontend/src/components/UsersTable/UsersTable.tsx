@@ -1,4 +1,3 @@
-import React from "react";
 import { useGetUsers } from "../../hooks/users/useGetUsers";
 
 const UsersTable = () => {
@@ -40,10 +39,10 @@ const UsersTable = () => {
         </thead>
         <tbody>
           {users.map((user) => (
-            <tr>
-              <td>Name</td>
-              <td>Email</td>
-              <td>Company Name</td>
+            <tr key={user.id}>
+              <td>{user.name}</td>
+              <td>{user.email}</td>
+              <td>{user.company.name}</td>
             </tr>
           ))}
         </tbody>
